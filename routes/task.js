@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
   res.send(data);
 });
 
-router.post("/", async (req, res) => {
+router.post("/categories/:id", async (req, res) => {
   try {
     const newTask = new Task({
       title: req.body.title,
@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-  const task_id = req.params.id; // update the movie
+  const task_id = req.params.id;
   const updatedTask = await Task.findByIdAndUpdate(task_id, req.body, {
     runValidators: true,
     new: true,

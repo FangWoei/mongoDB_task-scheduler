@@ -19,15 +19,15 @@ const categoryRouter = require("./routes/category");
 app.use("/tasks", taskRouter);
 app.use("/categories", categoryRouter);
 
-// app.get("/", (req, res) => {
-//   res.send(
-//     "<button><a href='/categories'>Categorys</a></button><button><a href='/tasks'>task</a></button>"
-//   );
-// });
-
-app.get("/tasks", (req, res) => {
-  res.send("<a href='/'>DUMBASS</a>");
+app.get("/", (req, res) => {
+  res.send(
+    "<button><a href='/categories'>Categorys</a></button><button><a href='/tasks'>task</a></button>"
+  );
 });
+
+// app.get("/tasks", (req, res) => {
+//   res.send("<a href='/'>DUMBASS</a>");
+// });
 
 // start the server
 app.listen(1226, () => {

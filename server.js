@@ -16,12 +16,12 @@ mongoose
 const taskRouter = require("./routes/task");
 const categoryRouter = require("./routes/category");
 
-app.use("/tasks", taskRouter);
-app.use("/categories", categoryRouter);
+app.use("/task", taskRouter);
+app.use("/category", categoryRouter);
 
 app.get("/", (req, res) => {
   res.send(
-    "<button><a href='/categories'>Categorys</a></button><button><a href='/tasks'>task</a></button>"
+    "<button><a href='/category'>Categorys</a></button><button><a href='/task'>task</a></button>"
   );
 });
 
